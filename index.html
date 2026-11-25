@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <header>
+        <h1>Student Management System</h1>
+    </header>
+
+    <!-- Main Content -->
+    
+<main>
+
+    <!-- Student Registration Section -->
+    <section class="form-container">
+
+        <h2>Student Registration</h2>
+
+        <form id="studentForm">
+
+            <div class="form-group">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter student name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter email address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="course">Select Course</label>
+                <select id="course" name="course" required>
+                    <option value="">Select Course</option>
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Java">Java</option>
+                    <option value="React">React</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit">Add Student</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+
+        </form>
+
+        <button type="button" id="toggleRecordsBtn">View Records</button>
+
+    </section>
+
+
+    <!-- Student Records Section -->
+    <section class="table-container" id="recordsSection" hidden>
+
+        <h2>Student Records</h2>
+
+        <div class="search-container">
+            <label for="search">Search Students</label>
+            <input type="text" id="search" placeholder="Search students by name...">
+        </div>
+
+        <caption>
+                <span>Registered Student Records</span>
+                <span id="studentCount">Total Students: 0</span>
+            </caption>
+
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Course</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentTableBody">
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+
+    <!-- Page Footer -->
+    <footer>
+        <p>Student Management System &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
